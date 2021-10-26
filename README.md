@@ -2,6 +2,8 @@
 ### 1. Introduction
 This report is present an approach to detect anomaly of mobile robot's current and vibration data.  The main idea is examine all data, separate them into two cluster as normal and anomaly and then  using these clustering results figure out the merged anomaly score for each data sample. For this purpose, both of current and vibration data are cluster by using Hierarchical clustering algorithm. Before the clustering there are several preprocessing step that are windowing, feature extraction, dynamic time warping and min-max normalization.  
 
+#### You can access our paper [here.](https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/K%C3%BCmeleme%20Algoritmalar%C4%B1%20Kullan%C4%B1larak%20Mobil%20Robot%20Verileri%20%C3%9Czerinde%20Anomali%20Tespiti.pdf)
+
 ### 2. Interested Data
 There are two different types of data that are coming from mobile robots sensors as current and vibration data. Both of them are produce at same frequency but they have different characteristic. Although the current data is numeric data, the vibration data is time series data. So, current data has a single value per each data packet but vibration data has much more value per each data packet.
 

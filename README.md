@@ -7,12 +7,12 @@ There are two different types of data that are coming from mobile robots sensors
 
 Current Data Sample        |  Vibration Data Sample
 :-------------------------:|:-------------------------:
-![](https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/images_current/wheel2%20Current.png) | ![](https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20Vibration.png)
+![](https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/images_current/wheel2%20Current.png) | ![](https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20Vibration.png)
 
 ### 3. Proposed Method
 There are two different method are proposed to detect anomaly on data. They have common step as windowing. And also they have some other different steps like feature extraction, normalization and dynamic time warping. These all are about preprocessing steps. After the preprocessing steps data is clustering into two subset by using hierarchical clustering as normal and anomaly. The anomaly scores of each data sample are produces as a result of clustering. And then, the results of two method are collect and anomaly scores are merge for each same data sample. While merging anomaly score, the mean of them are take. Given two method is perform separately using both current and vibration data. Proposed method is shown as below.
 
-![](https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/System-Architecture.PNG)
+![](https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/System-Architecture.PNG)
 
 Rest of here, method 1 is represent a method which is use feature extraction and method 2 is also represent a method which is use DTW. Remember that both of these methods have also common steps.
 
@@ -21,7 +21,7 @@ Rest of here, method 1 is represent a method which is use feature extraction and
 **A. Windowing** <br>
 In this process, the data are parsed into subsets named as window with same size. For the extract of features of data, the data must be a time series data. In this way, the data are converted time series data. In this project, window size is 3. This step is implement for both two methods. Sample windowing process output is shown as below:
 
-<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/windowing.PNG" align="center" width="600" height="300">
+<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/windowing.PNG" align="center" width="600" height="300">
 
 **B. Feature Extraction** <br>
 The features are extracted separately for each window. There are nine different feature as given below:
@@ -31,7 +31,7 @@ In method 2, DTW is used for calculate similarity instead of Euclidean distance.
 
 Feature Extraction         |  Dynamic Time Warping
 :-------------------------:|:-------------------------:
-<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/features.PNG" width="400" height="300"> | <img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/dtw.png" width="400" height="300">
+<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/features.PNG" width="400" height="300"> | <img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/dtw.png" width="400" height="300">
 
 **D. Min-Max Normalization** <br>
 Min-max normalization is one of the most common ways to normalize data. For every feature, the minimum value of that feature gets transformed into a 0, the maximum value gets transformed into a 1, and every other value gets transformed into a decimal between 0 and 1. Min-max normalization is executed on features that extracted from window. This step is implement only for method 1.
@@ -53,21 +53,21 @@ An anomaly score is located right-top of figure. Different clusters are shown wi
 
 Feature Extracted Clustering Anomaly Score|  DTW Clustering Anoamly Score
 :----------------------------------------:|:---------------------------------:
-<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/images_current/Wheel2%20-%20Feature%20Extracted%20-%20Anomaly%20Score%20with%20-%20n_clusters%202%20-%20window_size%202.png" width="600" height="300"> | <img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/images_current/Wheel2%20-%20Dynamic%20Time%20Warping%20-%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png" width="600" height="300">
+<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/images_current/Wheel2%20-%20Feature%20Extracted%20-%20Anomaly%20Score%20with%20-%20n_clusters%202%20-%20window_size%202.png" width="600" height="300"> | <img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/images_current/Wheel2%20-%20Dynamic%20Time%20Warping%20-%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png" width="600" height="300">
 
 Merged Anomaly Score
 :---------------------------:
-<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/images_current/Wheel2%20-%20Merged%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png" width="800" height="400">
+<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/images_current/Wheel2%20-%20Merged%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png" width="800" height="400">
 
 #### Vibration Data Results
 
 Feature Extracted Clustering Anomaly Score|  DTW Clustering Anoamly Score
 :----------------------------------------:|:---------------------------------:
-<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20-%20Feature%20Extracted%20-%20Anomaly%20Score%20with%20-%20n_clusters%202%20-%20window_size%202.png" width="600" height="300"> | <img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20-%20Dynamic%20Time%20Warping%20-%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png" width="600" height="300">
+<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20-%20Feature%20Extracted%20-%20Anomaly%20Score%20with%20-%20n_clusters%202%20-%20window_size%202.png" width="600" height="300"> | <img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20-%20Dynamic%20Time%20Warping%20-%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png" width="600" height="300">
 
 Merged Anomaly Score
 :---------------------------:
-<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20-%20Merged%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png" width="800" height="400">
+<img src="https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20-%20Merged%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png" width="800" height="400">
 
 
 

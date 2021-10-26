@@ -7,7 +7,7 @@ There are two different types of data that are coming from mobile robots sensors
 
 Current Data Sample        |  Vibration Data Sample
 :-------------------------:|:-------------------------:
-![](https://github.com/zekeriyyaa/zekeriyyaa-Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/images_current/Wheel2%20-%20Dynamic%20Time%20Warping%20-%20Anomaly%20Score%20-%20n_clusters%202%20-%20window_size%202.png) | ![](https://github.com/zekeriyyaa/Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20Vibration.png)
+![](https://github.com/zekeriyyaa/zekeriyyaa-Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/images_current/wheel2%20Current.png) | ![](https://github.com/zekeriyyaa/zekeriyyaa-Anomaly-Detection-Based-on-Clustering-of-Mobile-Robot-Data/blob/main/image_vibration/Wheel2%20Vibration.png)
 
 ### 3. Proposed Method
 There are two different method are proposed to detect anomaly on data. They have common step as windowing. And also they have some other different steps like feature extraction, normalization and dynamic time warping. These all are about preprocessing steps. After the preprocessing steps data is clustering into two subset by using hierarchical clustering as normal and anomaly. The anomaly scores of each data sample are produces as a result of clustering. And then, the results of two method are collect and anomaly scores are merge for each same data sample. While merging anomaly score, the mean of them are take. Given two method is perform separately using both current and vibration data. Proposed method is shown as below.

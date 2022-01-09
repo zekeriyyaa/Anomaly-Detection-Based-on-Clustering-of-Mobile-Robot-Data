@@ -1,4 +1,4 @@
-## Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Mobile-Robot-Data
+## Anomaly-Detection-Based-on-Hierarchical-Clustering-of-Autonomous-Transport-Vehicle-Data
 ### 1. Introduction
 This report is present an approach to detect anomaly of mobile robot's current and vibration data.  The main idea is examine all data, separate them into two cluster as normal and anomaly and then  using these clustering results figure out the merged anomaly score for each data sample. For this purpose, both of current and vibration data are cluster by using Hierarchical clustering algorithm. Before the clustering there are several preprocessing step that are windowing, feature extraction, dynamic time warping and min-max normalization.  
 
